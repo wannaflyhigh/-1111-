@@ -171,11 +171,13 @@ function showOnList(data){
 }
 function showOnTable(time_inf,chn,serial_no){
 	time_inf=time_inf.split(' ')
-	// console.log(time_inf)
+	console.log(time_inf)
 	const day=chnNumberToNum(time_inf[0])
 	let lessons
 	if(time_inf[1].indexOf('-')==-1){
-		lessons=lessonToNum(time_inf[1])
+		lessons=time_inf[1]
+		if(lessons.charCodeAt()>=65) lessons=lessons.charCodeAt()-65+11
+		if(lessons.length===2)lessons=10
 		document.querySelector(`#id${day}-${lessons}`).innerHTML+=`<p class="sn${serial_no}">${chn}</p>`
 		return
 	}
