@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="course-results.css">
+	<link rel="stylesheet" href="mycourses.css">
+	<script src="script.js" defer></script>
+	<script src="tabs.js" defer></script>
+	<script src="course-results.js" defer></script>
+	<title>台師大1111排課系統</title>
+</head>
+<body>
+	<div class="all">
+		<nav>
+			<button onclick="tabs.goToTab(tabs.search)">查詢</button>
+			<button onclick="tabs.goToTab(tabs.result)">明細</button>
+			<button onclick="tabs.goToTab(tabs.mycourses)">課表</button>
+			<button onclick="tabs.goToTab(tabs.about)">關於</button>
+		</nav>
+		<div class="bottom">
+			<div class="search">
+				<h2>查詢課程</h2>
+				<div class="search-container">
+					<!--year term
+					deptCode: "GU",
+					chn:'',
+					teacher:'',
+					serial_number:'',
+					course_code:''-->
+					<label for="deptCode">系所/學分學程</label>
+					<select id="deptCode">
+						<option value="">請選擇</option>
+					</select>
+					<div class="divForGU notGU">
+						<label for="generalKind">通識制度</label>
+						<select id="generalKind" class="generalKind">
+							<option value="">請選擇</option>
+						</select>
+						<label for="generalCore">通識核心</label>
+						<select id="generalCore" class="generalCore">
+							<option value="">請選擇</option>
+						</select>
+					</div>
+					<label for="chn">課程名稱</label>
+					<input id="chn">
+					<label for="teacher">教師名稱</label>
+					<input id="teacher">
+					<label for="serial_number">開課序號</label>
+					<input id="serial_number" type="number">
+					<label for="course_code">科目代碼</label>
+					<input id="course_code">
+					<button class="submit">查詢</button>
+				</div>
+			</div>
+			<div class="results" style="display:none">
+				<h2>搜尋結果</h2>
+				<div class="results-container">
+					
+				</div>
+			</div>
+			<div class="mycourses" style="display:none">
+				<h2>我的課表</h2>
+				<div class="mycourses-table">
+					<table class="course_table">
+						<tr id="week">
+							<th></th>
+							<th>星期一</th>
+							<th>星期二</th>
+							<th>星期三</th>
+							<th>星期四</th>
+							<th>星期五</th>
+							<th>星期六</th>
+							<!-- <th>星期日</th> -->
+						</tr>
+						<tr class="節數">
+							<td>第零節</td>
+							<td id="id1-0"></td>
+							<td id="id2-0"></td>
+							<td id="id3-0"></td>
+							<td id="id4-0"></td>
+							<td id="id5-0"></td>
+							<td id="id6-0"></td>
+						</tr>
+						<tr class="節數">
+							<td>第一節</td>
+							<td id="id1-1"></td>
+							<td id="id2-1"></td>
+							<td id="id3-1"></td>
+							<td id="id4-1"></td>
+							<td id="id5-1"></td>
+							<td id="id6-1"></td>
+						</tr>
+						<tr class="節數">
+							<td>第二節</td>
+							<td id="id1-2"></td>
+							<td id="id2-2"></td>
+							<td id="id3-2"></td>
+							<td id="id4-2"></td>
+							<td id="id5-2"></td>
+							<td id="id6-2"></td>
+						</tr>
+						<tr class="節數">
+							<td>第三節</td>
+							<td id="id1-3"></td>
+							<td id="id2-3"></td>
+							<td id="id3-3"></td>
+							<td id="id4-3"></td>
+							<td id="id5-3"></td>
+							<td id="id6-3"></td>
+						</tr>
+						<tr class="節數">
+							<td>第四節</td>
+							<td id="id1-4"></td>
+							<td id="id2-4"></td>
+							<td id="id3-4"></td>
+							<td id="id4-4"></td>
+							<td id="id5-4"></td>
+							<td id="id6-4"></td>
+						</tr>
+						<tr class="節數">
+							<td>第五節</td>
+							<td id="id1-5"></td>
+							<td id="id2-5"></td>
+							<td id="id3-5"></td>
+							<td id="id4-5"></td>
+							<td id="id5-5"></td>
+							<td id="id6-5"></td>
+						</tr>
+						<tr class="節數">
+							<td>第六節</td>
+							<td id="id1-6"></td>
+							<td id="id2-6"></td>
+							<td id="id3-6"></td>
+							<td id="id4-6"></td>
+							<td id="id5-6"></td>
+							<td id="id6-6"></td>
+						</tr>
+						<tr class="節數">
+							<td>第七節</td>
+							<td id="id1-7"></td>
+							<td id="id2-7"></td>
+							<td id="id3-7"></td>
+							<td id="id4-7"></td>
+							<td id="id5-7"></td>
+							<td id="id6-7"></td>
+						</tr>
+						<tr class="節數">
+							<td>第八節</td>
+							<td id="id1-8"></td>
+							<td id="id2-8"></td>
+							<td id="id3-8"></td>
+							<td id="id4-8"></td>
+							<td id="id5-8"></td>
+							<td id="id6-8"></td>
+						</tr>
+						<tr class="節數">
+							<td>第九節</td>
+							<td id="id1-9"></td>
+							<td id="id2-9"></td>
+							<td id="id3-9"></td>
+							<td id="id4-9"></td>
+							<td id="id5-9"></td>
+							<td id="id6-9"></td>
+						</tr>
+						<tr class="節數">
+							<td>第十節</td>
+							<td id="id1-10"></td>
+							<td id="id2-10"></td>
+							<td id="id3-10"></td>
+							<td id="id4-10"></td>
+							<td id="id5-10"></td>
+							<td id="id6-10"></td>
+						</tr>
+						<tr class="節數">
+							<td>第A節</td>
+							<td id="id1-11"></td>
+							<td id="id2-11"></td>
+							<td id="id3-11"></td>
+							<td id="id4-11"></td>
+							<td id="id5-11"></td>
+							<td id="id6-11"></td>
+						</tr>
+						<tr class="節數">
+							<td>第B節</td>
+							<td id="id1-12"></td>
+							<td id="id2-12"></td>
+							<td id="id3-12"></td>
+							<td id="id4-12"></td>
+							<td id="id5-12"></td>
+							<td id="id6-12"></td>
+						</tr>
+						<tr class="節數">
+							<td>第C節</td>
+							<td id="id1-13"></td>
+							<td id="id2-13"></td>
+							<td id="id3-13"></td>
+							<td id="id4-13"></td>
+							<td id="id5-13"></td>
+							<td id="id6-13"></td>
+						</tr>
+						<tr class="節數">
+							<td>第D節</td>
+							<td id="id1-14"></td>
+							<td id="id2-14"></td>
+							<td id="id3-14"></td>
+							<td id="id4-14"></td>
+							<td id="id5-14"></td>
+							<td id="id6-14"></td>
+						</tr>
+					</table>
+				</div>
+				<div class="mycourses-list">
+					
+				</div>
+			</div>
+			<div class="about" style="display:none">
+				<h2>關於</h2>
+				<p>我是一位科技系的菜雞</p>
+				<h2>版本紀錄</h2>
+				<p>2022/7/29 修復由10開始之課程無法顯示於課表的錯誤(如3168 行為與觀念藝術)</p>
+				<p>2022/7/29 修復開課序號首位為0無法刪除之錯誤(如0314 商用英文)</p>
+				<!-- <h2>免責聲明</h2>
+				<p>本網站僅會記錄您的使用資訊於您的瀏覽器中</p> -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+body{
+	margin: 0px;
+	background-color: #333;
+	color: #fff;
+}
+
+nav{
+	user-select: none;
+	display: flex;
+	background-color: #555;
+	padding-left: .5rem;
+	position: sticky;
+	top: 0px;
+}
+
+nav>button{
+	margin: 5px;
+	border-radius: .75rem;
+	border: 1px solid black;
+	padding: .25rem;
+	font-size: 1rem;
+	background-color: #777;
+}
+nav>button:hover{
+	background-color: #555;
+}
+
+.bottom{
+	padding: 10px;
+}
+
+.search-container{
+	background-color: #222;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	align-items: center; 
+	border: 2px solid 222;
+	border-radius: 3rem;
+	width: fit-content;
+	padding: 1rem;
+	margin: auto;
+}
+
+.search-container>input,.search-container>select,.search-container>div>select{
+	border-radius: 0.5rem;
+}
+
+.search-container>*{
+	margin-top: 5px;
+}
+
+.search-container>button{
+	margin: 5px;
+	border-radius: .5rem;
+	border: 1px solid black;
+	padding: .25rem;
+	font-size: 1rem;
+	color: #fff;
+	background-color: #555;
+}
+
+.divForGU{
+	display: flex;
+}
+
+.notGU{
+	display: none;
+}
+
+/* from lao gu */
+/* .detail{
+	color: black;
+	width: 70%;
+	height: 30px;
+	border-radius: 5px;
+	position: absolute;
+	display: flex;
+	align-items: center
+}
+
+#add_schedule_btn{
+	background-color: black;
+	width: 120px;
+	height: 30px;
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	color: #fff;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+#add_schedule_btn:hover{
+	background-color: gray;
+	transform: scale(1.05);
+}
+
+.expand_box{
+	background: white;
+	width: 80%;
+	height: 210px;
+	border-radius: 5px;
+	position: relative;
+	margin:0 auto;
+	margin-bottom: 20px;
+}
+
+#exp_name{
+	left: 10px;
+	top: 5px;
+}
+
+#exp_time{
+	left: 10px;
+	top: 40px;
+}
+
+#exp_teacher{
+	left: 10px;
+	top: 75px;
+}
+
+#exp_full{
+	left: 10px;
+	top: 110px;
+}
+
+.full{
+	width:25%;
+}
+
+#exp_information{
+	background-color: gray;
+	color: white;
+	height: 60px;
+	left: 10px;
+	top: 145px;
+}
+
+#show_less_btn{
+	background-color: black;
+	width: 80px;
+	height: 30px;
+	position: absolute;
+	right: 7px;
+	bottom: 7px;
+	color: #fff;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+#show_less_btn:hover{
+	background-color: gray;
+	transform: scale(1.05);
+}
+
+.mycourses-table p{
+	margin: 0px;
+} */
